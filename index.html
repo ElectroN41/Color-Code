@@ -1,0 +1,248 @@
+ <!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resistor Color Code Calculator</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #2b5876, #4e4376);
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 30px;
+            width: 90%;
+            max-width: 400px;
+            text-align: center;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        label {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        select {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        button {
+            background: #ff5f6d;
+            background: linear-gradient(135deg, #ff9966, #ff5e62);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .result {
+            margin-top: 20px;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Resistor Color Code Calculator</h1>
+
+        <label for="band1">Band 1:</label>
+        <select id="band1">
+            <option value="1">Brown</option>
+            <option value="2">Red</option>
+            <option value="3">Orange</option>
+            <option value="4">Yellow</option>
+            <option value="5">Green</option>
+            <option value="6">Blue</option>
+            <option value="7">Violet</option>
+            <option value="8">Gray</option>
+            <option value="9">White</option>
+        </select>
+
+        <label for="band2">Band 2:</label>
+        <select id="band2">
+            <option value="0">Black</option>
+            <option value="1">Brown</option>
+            <option value="2">Red</option>
+            <option value="3">Orange</option>
+            <option value="4">Yellow</option>
+            <option value="5">Green</option>
+            <option value="6">Blue</option>
+            <option value="7">Violet</option>
+            <option value="8">Gray</option>
+            <option value="9">White</option>
+        </select>
+
+        <label for="multiplier">Multiplier:</label>
+        <select id="multiplier">
+            <option value="1">Black</option>
+            <option value="10">Brown</option>
+            <option value="100">Red</option>
+            <option value="1000">Orange</option>
+            <option value="10000">Yellow</option>
+            <option value="100000">Green</option>
+            <option value="1000000">Blue</option>
+            <option value="10000000">Violet</option>
+            <option value="0.1">Gold</option>
+            <option value="0.01">Silver</option>
+        </select>
+
+        <label for="tolerance">Tolerance:</label>
+        <select id="tolerance">
+            <option value="1">Brown ±1%</option>
+            <option value="2">Red ±2%</option>
+            <option value="5">Gold ±5%</option>
+            <option value="10">Silver ±10%</option>
+        </select>
+
+        <button onclick="calculateResistance()">Calculate Resistance</button>
+
+        <div class="result" id="result">Results will appear here</div>
+    </div>
+
+    <script>
+        function calculateResistance() {
+            const band1 = parseInt(document.getElementById('band1').value);
+            const band2 = parseInt(document.getElementById('band2').value);
+            const multiplier = parseFloat(document.getElementById('multiplier').value);
+            const tolerance = parseInt(document.getElementById('tolerance').value);
+
+            const baseResistance = (band1 * 10 + band2) * multiplier;
+            const resistance = baseResistance.toFixed(2);
+            const minResistance = (baseResistance - (baseResistance * tolerance / 100)).toFixed(2);
+            const maxResistance = (baseResistance + (baseResistance * tolerance / 100)).toFixed(2);
+
+            document.getElementById('result').innerHTML = `Resistance: ${resistance} Ω<br>Range: ${minResistance} Ω - ${maxResistance} Ω`;
+        }
+    </script>
+</body>
+
+</html> 
+
+  -->
+
+
+
+
+
+
+
+
+
+  <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Resistor Color Code Calculator</title>
+    
+</head>
+
+<body>
+    <div class="container">
+        <h1>Resistor Color Code Calculator</h1>
+
+        <label for="band1">Band 1:</label>
+        <select id="band1">
+            <option value="1">Brown</option>
+            <option value="2">Red</option>
+            <option value="3">Orange</option>
+            <option value="4">Yellow</option>
+            <option value="5">Green</option>
+            <option value="6">Blue</option>
+            <option value="7">Violet</option>
+            <option value="8">Gray</option>
+            <option value="9">White</option>
+        </select>
+
+        <label for="band2">Band 2:</label>
+        <select id="band2">
+            <option value="0">Black</option>
+            <option value="1">Brown</option>
+            <option value="2">Red</option>
+            <option value="3">Orange</option>
+            <option value="4">Yellow</option>
+            <option value="5">Green</option>
+            <option value="6">Blue</option>
+            <option value="7">Violet</option>
+            <option value="8">Gray</option>
+            <option value="9">White</option>
+        </select>
+
+        <label for="multiplier">Multiplier:</label>
+        <select id="multiplier">
+            <option value="1">Black</option>
+            <option value="10">Brown</option>
+            <option value="100">Red</option>
+            <option value="1000">Orange</option>
+            <option value="10000">Yellow</option>
+            <option value="100000">Green</option>
+            <option value="1000000">Blue</option>
+            <option value="10000000">Violet</option>
+            <option value="0.1">Gold</option>
+            <option value="0.01">Silver</option>
+        </select>
+
+        <label for="tolerance">Tolerance:</label>
+        <select id="tolerance">
+            <option value="1">Brown ±1%</option>
+            <option value="2">Red ±2%</option>
+            <option value="5">Gold ±5%</option>
+            <option value="10">Silver ±10%</option>
+        </select>
+
+        <button onclick="calculateResistance()">Calculate Resistance</button>
+
+        <div class="result" id="result">Results will appear here</div>
+
+        <hr>
+
+        <label for="ohmsInput">Enter resistance in ohms:</label>
+        <input type="number" id="ohmsInput" placeholder="Enter value in ohms">
+        <button onclick="convertToKiloOhms()">Convert to kilo-ohms</button>
+
+        <div class="result" id="conversionResult"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
